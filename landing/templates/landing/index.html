@@ -1,0 +1,2066 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Industrial Water Storage Solutions | Shubham Tanks and Liners</title>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Public+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#184884",
+                        "secondary": "#E10600",
+                        "accent": "#0EA5E9",
+                        "background-light": "#F5F7FA",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-in-right': 'slideInRight 0.7s ease-out',
+                        'slide-in-left': 'slideInLeft 0.7s ease-out',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        slideInLeft: {
+                            '0%': { transform: 'translateX(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
+                            '50%': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.5)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* ============================================
+           PREMIUM SCROLL ANIMATIONS
+           ============================================ */
+
+        /* Base animation states (hidden before scroll) */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Fade in from bottom */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Fade in from left */
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .fade-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Fade in from right */
+        .fade-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .fade-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Scale in animation */
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger delay classes for sequential animations */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+
+        /* Parallax scroll effect */
+        .parallax {
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Premium card hover effects */
+        .card-3d {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+
+        .card-3d:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Glow effect on hover */
+        .glow-on-hover {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-on-hover::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(24, 72, 132, 0.3), transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .glow-on-hover:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Number counter animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Text reveal animation (word by word) */
+        .text-reveal span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: revealText 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes revealText {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth section transitions */
+        section {
+            will-change: transform, opacity;
+        }
+
+        /* Background parallax */
+        .bg-parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Image zoom on scroll */
+        .zoom-on-scroll img {
+            transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .zoom-on-scroll.visible img {
+            transform: scale(1.05);
+        }
+
+        /* Underline animation */
+        .animated-underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #184884;
+            transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .animated-underline.visible::after {
+            width: 100%;
+        }
+
+        /* Blur in animation */
+        .blur-in {
+            opacity: 0;
+            filter: blur(10px);
+            transition: opacity 0.8s ease-out, filter 0.8s ease-out;
+        }
+
+        .blur-in.visible {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        /* ============================================
+           EXISTING STYLES (KEPT AS IS)
+           ============================================ */
+
+        /* Custom scroll behavior */
+        html {
+            scroll-behavior: auto; /* Disable native smooth scroll */
+        }
+
+        body {
+            scroll-behavior: auto;
+        }
+
+        /* Smooth section transition feel */
+        section {
+            scroll-margin-top: 90px;
+            will-change: transform, opacity;
+        }
+        
+        * {
+            scroll-behavior: auto;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #184884;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #133a6d;
+        }
+
+        /* Feature highlight animation */
+        @keyframes feature-pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .feature-pulse {
+            animation: feature-pulse 3s ease-in-out infinite;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #184884 0%, #0EA5E9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Card hover effects */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Staggered animation delays */
+        .animation-delay-100 { animation-delay: 100ms; }
+        .animation-delay-200 { animation-delay: 200ms; }
+        .animation-delay-300 { animation-delay: 300ms; }
+        .animation-delay-400 { animation-delay: 400ms; }
+        .animation-delay-500 { animation-delay: 500ms; }
+
+        /* Marquee Animation Styles */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes marquee2 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 15s linear infinite;
+            animation-play-state: running;
+        }
+
+        .animate-marquee2 {
+            animation: marquee2 15s linear infinite;
+            animation-play-state: running;
+        }
+
+        .hover\:pause:hover {
+            animation-play-state: paused;
+        }
+
+        /* Navigation Styles */
+        #mainNav {
+            background: transparent;
+            backdrop-filter: none;
+        }
+
+        #mainNav.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+        }
+
+        /* Navigation Links */
+        .nav-link {
+            color: rgba(197, 209, 233, 0.9);
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        #mainNav.scrolled .nav-link {
+            color: rgb(42, 48, 58);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color, #646dec);
+        }
+
+        .nav-link.active {
+            color: var(--primary-color, #bbbeca);
+        }
+
+        /* Active Indicator */
+        .nav-indicator {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color, #1e40af);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link.active .nav-indicator {
+            width: 100%;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: var(--primary-color, #1e40af);
+        }
+
+        .cta-button:hover {
+            background: var(--primary-color-dark, #1e3a8a);
+        }
+
+        /* Mobile Menu Animations */
+        #mobileMenu {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        #mobileMenu.open {
+            transform: translateX(0);
+        }
+
+        #mobileMenuOverlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Mobile Nav Links */
+        .mobile-nav-link.active {
+            color: var(--primary-color, #14318e);
+            font-weight: 600;
+        }
+
+        /* Logo hover effect */
+        header a[href="#hero"]:hover img {
+            filter: brightness(1.1);
+        }
+
+        /* Smooth transitions */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Background Image with Smooth Scrolling Animation */
+        #contact {
+            background-image: url("{% static 'landing/images/hero-section.jpg' %}");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+
+        /* Scroll Story Enhancements */
+        .scroll-story-container {
+            position: relative;
+        }
+
+        .scroll-story-sticky {
+            position: sticky;
+            top: 0;
+            will-change: transform;
+        }
+
+        .story-step,
+        .story-image {
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .progress-dot {
+            transition: all 0.3s ease;
+        }
+
+        /* Smooth animations */
+        @media (prefers-reduced-motion: reduce) {
+            .story-step,
+            .story-image,
+            .progress-dot {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-body antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <header id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <!-- Logo for transparent navbar (visible by default) -->
+                    <img id="logoLight" 
+                        src="{% static 'landing/images/White-Logo.png' %}" 
+                        alt="Shubham Tanks Logo" 
+                        class="h-10 w-40 object-contain transition-opacity duration-300"/>
+                    
+                    <!-- Logo for scrolled navbar (hidden by default) -->
+                    <img id="logoDark" 
+                        src="{% static 'landing/images/Shubham logo .png' %}" 
+                        alt="Shubham Tanks Logo" 
+                        class="h-10 w-40 object-contain transition-opacity duration-300 absolute opacity-0"/>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="navbar hidden lg:flex items-center gap-8">
+                <a href="#hero" class="nav-link text-sm font-medium transition-colors relative group" data-section="hero">
+                    Home
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#products" class="nav-link text-sm font-medium transition-colors relative group" data-section="products">
+                    Products
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#applications" class="nav-link text-sm font-medium transition-colors relative group" data-section="applications">
+                    Applications
+                    <span class="nav-indicator"></span>
+                </a>
+                <a href="#why-us" class="nav-link text-sm font-medium transition-colors relative group" data-section="why-us">
+                    Why Us
+                    <span class="nav-indicator"></span>
+                </a>
+            </nav>
+
+            <!-- CTA Button (Desktop) -->
+            <div class="hidden lg:block">
+                <button id="quoteButton" class="cta-button bg-primary text-white px-6 py-2.5 rounded-md font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    Get Custom Quote
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuToggle" class="lg:hidden p-2 text-gray-700 hover:text-primary transition-colors">
+                <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 z-40 lg:hidden opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<!-- Mobile Menu Sidebar -->
+<div id="mobileMenu" class="fixed top-0 right-0 h-full w-72 bg-white border-l border-gray-200 z-50 lg:hidden transform translate-x-full transition-transform duration-300 shadow-2xl">
+    <div class="p-6 pt-20">
+        <div class="flex flex-col space-y-4">
+            <a href="#hero" class="mobile-nav-link text-lg font-medium py-2 text-gray-700 hover:text-primary transition-colors" data-section="hero">
+                Home
+            </a>
+            <a href="#products" class="mobile-nav-link text-lg font-medium py-2 text-gray-700 hover:text-primary transition-colors" data-section="products">
+                Products
+            </a>
+            <a href="#applications" class="mobile-nav-link text-lg font-medium py-2 text-gray-700 hover:text-primary transition-colors" data-section="applications">
+                Applications
+            </a>
+            <a href="#why-us" class="mobile-nav-link text-lg font-medium py-2 text-gray-700 hover:text-primary transition-colors" data-section="why-us">
+                Why Us
+            </a>
+            <a href="#contact" class="mobile-nav-link text-lg font-medium py-2 text-gray-700 hover:text-primary transition-colors" data-section="contact">
+                Contact
+            </a>
+            <button id="mobileQuoteButton" class="bg-primary text-white px-6 py-3 rounded-md font-semibold mt-4 w-full hover:bg-primary/90 transition-colors">
+                Get Custom Quote
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- Hero Section -->
+<section id="hero" class="relative h-screen w-full overflow-hidden bg-black">
+    <!-- Background Image -->
+    <div class="absolute inset-0 w-full h-full">
+        <img 
+            src="{% static 'landing/images/hero-section.jpg' %}" 
+            alt="Water Storage Tank" 
+            class="w-full h-130 object-cover scale-130"
+            id="heroImage"
+        />
+        <!-- Dark overlay for better text readability -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
+    </div>
+
+    <!-- Navigation is now separate - see previous navbar code -->
+
+    <!-- Main Hero Content - Lower Left -->
+    <div class="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40 max-w-4xl">
+        <div class="space-y-6">
+
+            <!-- Main Heading -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white animate-slide-up fade-up stagger-1">
+                <span class="block">ENGINEERED LIQUID</span>
+                <span class="block">STORAGE SOLUTIONS</span>
+                <span class="block text-primary-light">THAT LAST DECADES</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl animate-slide-up animation-delay-200 fade-up stagger-2">
+                India's trusted partner for industrial, commercial & fire water storage systems — delivering strength, compliance, and reliability.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap gap-4 mt-8 animate-slide-up animation-delay-300 fade-up stagger-3">
+                <button id="heroQuoteButton"  class="bg-red-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center gap-2">
+                    <span>Get Custom Quote</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <button id="heroBrochureButton" class="bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/30 flex items-center gap-2">
+                    <span>Download Brochure</span>
+                    <span class="material-symbols-outlined">download</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Bar - Bottom Right -->
+    <div class="absolute bottom-12 right-6 sm:right-8 lg:right-12 z-40 animate-slide-in-right hidden md:block fade-right">
+        <div class="flex flex-col gap-6">
+            <div class="glass-effect px-6 py-4 rounded-xl border border-white/20">
+                <p class="text-3xl font-bold text-white counter" data-count="8000">0</p>
+                <p class="text-sm font-medium text-white/80">Projects Completed</p>
+            </div>
+            <div class="glass-effect px-6 py-4 rounded-xl border border-white/20">
+                <p class="text-3xl font-bold text-white counter" data-count="20">0</p>
+                <p class="text-sm font-medium text-white/80">Years Experience</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Stats - Bottom (Full Width) -->
+    <div class="md:hidden absolute bottom-0 left-0 right-0 z-40 animate-slide-up fade-up">
+        <div class="grid grid-cols-3 gap-2 px-4 pb-4">
+            <div class="glass-effect px-3 py-3 rounded-lg border border-white/20 text-center">
+                <p class="text-xl font-bold text-white counter" data-count="7500">0</p>
+                <p class="text-xs font-medium text-white/80">Projects</p>
+            </div>
+            <div class="glass-effect px-3 py-3 rounded-lg border border-white/20 text-center">
+                <p class="text-xl font-bold text-white counter" data-count="25">0</p>
+                <p class="text-xs font-medium text-white/80">Years</p>
+            </div>
+            <div class="glass-effect px-3 py-3 rounded-lg border border-white/20 text-center">
+                <p class="text-xl font-bold text-white counter" data-count="100">0</p>
+                <p class="text-xs font-medium text-white/80">Certified</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-40 animate-bounce hidden md:block">
+        <div class="flex flex-col items-center gap-2 text-white/80">
+        </div>
+    </div>
+</section>  
+
+    <!-- Applications Section -->
+    <section id="applications" class="relative bg-gradient-to-b from-white to-gray-50">
+        <!-- Desktop Version: Scroll-Driven Storytelling -->
+        <div class="hidden lg:block">
+            <div class="scroll-story-container h-[400vh] relative">
+                <div class="scroll-story-sticky sticky top-0 h-screen flex items-center overflow-hidden">
+                    <div class="max-w-8xl mx-auto px-6 w-full">
+                        <div class="grid grid-cols-12 gap-16 items-center">
+                            
+                            <!-- Left Column: Content (Changes on Scroll) -->
+                            <div class="relative col-span-5">
+                                <!-- Step 1 -->
+                                <div class="story-step absolute inset-0 flex items-center p-8 transition-all duration-700 ease-out transform opacity-0 translate-y-6" data-step="0">
+                                    <div class="space-y-6 max-w-xl">
+                                        <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                                            01 — Fire Protection
+                                        </div>
+                                        <h2 class="text-5xl font-black text-gray-900 leading-tight">
+                                            FM Approved<br/>Fire Water Storage
+                                        </h2>
+                                        <p class="text-xl text-gray-600 leading-relaxed">
+                                            Industry-leading fire protection systems engineered to meet FM 4020 standards. Trusted by industrial facilities across India for critical fire safety infrastructure.
+                                        </p>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">FM Global certified for insurance compliance</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Rapid deployment for emergency response</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Seismic-resistant modular design</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Step 2 -->
+                                <div class="story-step absolute inset-0 flex items-center p-8 transition-all duration-700 ease-out transform opacity-0 translate-y-6" data-step="1">
+                                    <div class="space-y-6 max-w-xl">
+                                        <div class="inline-block px-4 py-2 bg-blue-500/10 text-blue-600 rounded-full text-sm font-semibold">
+                                            02 — Potable Water
+                                        </div>
+                                        <h2 class="text-5xl font-black text-gray-900 leading-tight">
+                                            Food-Grade<br/>Drinking Water Tanks
+                                        </h2>
+                                        <p class="text-xl text-gray-600 leading-relaxed">
+                                            NSF-certified liners ensure safe, contamination-free drinking water storage for municipalities, hospitals, hotels, and commercial complexes.
+                                        </p>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">NSF/ANSI 61 certified liners</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Hygienic stainless steel construction</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Easy cleaning and maintenance access</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Step 3 -->
+                                <div class="story-step absolute inset-0 flex items-center p-8 transition-all duration-700 ease-out transform opacity-0 translate-y-6" data-step="2">
+                                    <div class="space-y-6 max-w-xl">
+                                        <div class="inline-block px-4 py-2 bg-orange-500/10 text-orange-600 rounded-full text-sm font-semibold">
+                                            03 — Industrial Process
+                                        </div>
+                                        <h2 class="text-5xl font-black text-gray-900 leading-tight">
+                                            Heavy Industry<br/>Process Water Storage
+                                        </h2>
+                                        <p class="text-xl text-gray-600 leading-relaxed">
+                                            Corrosion-resistant tanks designed for chemical processing, manufacturing, and heavy industrial applications with aggressive liquid handling.
+                                        </p>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Advanced epoxy coating systems</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Temperature-resistant up to 90°C</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Custom sizing for process requirements</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Step 4 -->
+                                <div class="story-step absolute inset-0 flex items-center p-8 transition-all duration-700 ease-out transform opacity-0 translate-y-6" data-step="3">
+                                    <div class="space-y-6 max-w-xl">
+                                        <div class="inline-block px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-semibold">
+                                            04 — Wastewater Treatment
+                                        </div>
+                                        <h2 class="text-5xl font-black text-gray-900 leading-tight">
+                                            ETP & STP<br/>Effluent Storage Solutions
+                                        </h2>
+                                        <p class="text-xl text-gray-600 leading-relaxed">
+                                            Specialized tanks for sewage treatment plants and effluent treatment facilities. Built to handle biological and chemical treatment processes.
+                                        </p>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Odor-resistant sealed systems</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Biological treatment compatibility</span>
+                                            </li>
+                                            <li class="flex items-start gap-3">
+                                                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                                                <span class="text-gray-700">Environmental compliance certified</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Images (Changes on Scroll) -->
+                            <div class="relative col-span-7 lg:h-[86vh] rounded-3xl overflow-hidden shadow-2xl transform lg:translate-y-12">
+                                <!-- Image 1 -->
+                                <div class="story-image absolute inset-0 opacity-0 transition-transform transition-opacity duration-700 ease-out transform scale-105" data-step="0">
+                                    <img src="{% static 'landing/images/fm.png' %}" 
+                                        alt="Fire Water Storage Tank"
+                                        class="w-full h-full object-cover"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                </div>
+
+                                <!-- Image 2 -->
+                                <div class="story-image absolute inset-0 opacity-0" data-step="1">
+                                    <img src="{% static 'landing/images/rct.jpeg' %}" 
+                                        alt="Potable Water Tank"
+                                        class="w-full h-full object-cover"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                </div>
+
+                                <!-- Image 3 -->
+                                <div class="story-image absolute inset-0 opacity-0" data-step="2">
+                                    <img src="{% static 'landing/images/sst1.jpg' %}" 
+                                        alt="Industrial Process Tank"
+                                        class="w-full h-full object-cover"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                </div>
+
+                                <!-- Image 4 -->
+                                <div class="story-image absolute inset-0 opacity-0" data-step="3">
+                                    <img src="{% static 'landing/images/hero-section.jpg' %}" 
+                                        alt="Wastewater Treatment Tank"
+                                        class="w-full h-full object-cover"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                </div>
+
+                                <!-- Progress Indicator -->
+                                <div class="absolute bottom-8 left-8 flex gap-3 z-10">
+                                    <div class="progress-dot w-3 h-3 rounded-full bg-white/50 transition-all duration-300" data-step="0"></div>
+                                    <div class="progress-dot w-3 h-3 rounded-full bg-white/50 transition-all duration-300" data-step="1"></div>
+                                    <div class="progress-dot w-3 h-3 rounded-full bg-white/50 transition-all duration-300" data-step="2"></div>
+                                    <div class="progress-dot w-3 h-3 rounded-full bg-white/50 transition-all duration-300" data-step="3"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Version: Traditional Scroll Cards -->
+        <div class="block lg:hidden py-20 px-4">
+            <div class="max-w-2xl mx-auto space-y-16">
+                
+                <!-- Mobile Card 1 -->
+                <div class="fade-up space-y-6">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="{% static 'landing/images/fm.png' %}" 
+                            alt="Fire Water Storage" 
+                            class="w-full h-64 object-cover"/>
+                    </div>
+                    <div class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold">
+                        01 — Fire Protection
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-900">FM Approved Fire Water Storage</h3>
+                    <p class="text-lg text-gray-600">Industry-leading fire protection systems engineered to meet FM 4020 standards.</p>
+                </div>
+                
+                <!-- Mobile Card 2 -->
+                <div class="fade-up space-y-6">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="{% static 'landing/images/rct.jpeg' %}" 
+                            alt="Potable Water" 
+                            class="w-full h-64 object-cover"/>
+                    </div>
+                    <div class="inline-block px-4 py-2 bg-blue-500/10 text-blue-600 rounded-full text-sm font-semibold">
+                        02 — Potable Water
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-900">Food-Grade Drinking Water Tanks</h3>
+                    <p class="text-lg text-gray-600">NSF-certified liners ensure safe, contamination-free drinking water storage.</p>
+                </div>
+
+                <!-- Mobile Card 3 -->
+                <div class="fade-up space-y-6">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="{% static 'landing/images/sst1.jpg' %}" 
+                            alt="Industrial Process" 
+                            class="w-full h-64 object-cover"/>
+                    </div>
+                    <div class="inline-block px-4 py-2 bg-orange-500/10 text-orange-600 rounded-full text-sm font-semibold">
+                        03 — Industrial Process
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-900">Heavy Industry Process Water Storage</h3>
+                    <p class="text-lg text-gray-600">Corrosion-resistant tanks for chemical processing and manufacturing.</p>
+                </div>
+
+                <!-- Mobile Card 4 -->
+                <div class="fade-up space-y-6">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="{% static 'landing/images/hero-section.jpg' %}" 
+                            alt="Wastewater Treatment" 
+                            class="w-full h-64 object-cover"/>
+                    </div>
+                    <div class="inline-block px-4 py-2 bg-green-500/10 text-green-600 rounded-full text-sm font-semibold">
+                        04 — Wastewater Treatment
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-900">ETP & STP Effluent Storage Solutions</h3>
+                    <p class="text-lg text-gray-600">Specialized tanks for sewage and effluent treatment facilities.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section id="products" class="bg-white py-20">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animated-underline">Our Premium Storage Systems</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Engineered for durability, compliance, and long-term performance across all industrial applications</p>
+            </div>
+            
+            <div class="grid md:grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="flex flex-col border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 group card-hover animate-slide-up animation-delay-100 fade-up stagger-1 card-3d glow-on-hover">
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-50 to-gray-100 relative group zoom-on-scroll">
+                    <!-- Just the image, no icon -->
+                    <img src="{% static 'landing/images/rct.jpeg' %}" 
+                        alt="Zincalume Tank"
+                        class="w-full h-full object-center group-hover:scale-110 transition-transform duration-500">
+                    
+                    <!-- Subtle overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    
+                </div>
+                    <div class="flex flex-col flex-1 p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Zincalume Tanks with Liner</h3>
+                        <ul class="flex flex-col gap-2 mb-6 flex-1">
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Fast installation & assembly
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Superior corrosion resistance
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Food-grade / industrial liners
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> <strong>Zincalume ColorBond options available</strong>
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 px-4 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1">
+                            Download Spec Sheet
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="flex flex-col border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 group card-hover animate-slide-up animation-delay-200 fade-up stagger-2 card-3d glow-on-hover">
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-gray-50 to-blue-100 relative zoom-on-scroll">
+                        <!-- Image with hover zoom -->
+                        <img src="{% static 'landing/images/sst1.jpg' %}" 
+                            alt="SECURESTORE™ Micro-Coated Tank"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Dark overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                    <div class="flex flex-col flex-1 p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">SECURESTORE™ Micro-Coated</h3>
+                        <ul class="flex flex-col gap-2 mb-6 flex-1">
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Advanced corrosion protection
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Ideal for aggressive liquids
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Extended service life
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 px-4 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1">
+                            Download Spec Sheet
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="flex flex-col border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 group card-hover animate-slide-up animation-delay-300 fade-up stagger-3 card-3d glow-on-hover">
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-red-50 to-gray-100 relative group zoom-on-scroll">
+                    <!-- Background Image with hover effect -->
+                    <img src="{% static 'landing/images/fm.png' %}" 
+                        alt="Fire safety water tank"
+                        class="w-full h-48 object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"/>
+                    
+                    <!-- Dark overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    
+                    <!-- Content -->
+                    
+                    <div class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded text-xs font-bold animate-pulse z-10 shadow-lg">Fire Safety</div>
+                </div>
+                    <div class="flex flex-col flex-1 p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">FM Approved Fire Water Tanks</h3>
+                        <ul class="flex flex-col gap-2 mb-6 flex-1">
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> FM 4020 compliant design
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Engineered for fire protection
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Trusted by EPCs & consultants
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 px-4 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1">
+                            Download Spec Sheet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: GFS Tanks -->
+                <div class="flex flex-col border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-500 group card-hover animate-slide-up animation-delay-400 fade-up stagger-4 card-3d glow-on-hover">
+                    <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-50 to-gray-100 relative group zoom-on-scroll">
+                        <!-- Image with hover zoom -->
+                        <img src="{% static 'landing/images/gfs.png' %}" 
+                            alt="GFS Tank - Glass Fused to Steel"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Subtle overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                        
+                    </div>
+                    <div class="flex flex-col flex-1 p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Glass Fused to Steel<br></h3>
+                        <ul class="flex flex-col gap-2 mb-6 flex-1">
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Superior corrosion resistance
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Hygienic & easy to clean
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> Longest service life
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <!-- <span class="material-symbols-outlined text-green-500 text-[20px]">check</span> <strong>Ideal for potable water</strong> -->
+                            </li>
+                        </ul>
+                        <button class="w-full py-3 px-4 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1">
+                            Download Spec Sheet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Feature Highlight -->
+    <section class="py-12 bg-gradient-to-r from-amber-50 to-yellow-50 border-y border-amber-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 fade-up">
+                <div class="flex items-center gap-4 animate-scale-in scale-in">
+                    <div class="size-12 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
+                        <span class="material-symbols-outlined text-2xl">star</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">Premium Feature Available</h3>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-2 animate-slide-up text-reveal">
+                        <span class="feature-pulse inline-block">Zincalume ColorBond Tanks</span>
+                    </h2>
+                    <p class="text-lg font-semibold text-amber-700 animate-fade-in animation-delay-300">
+                        Superior corrosion resistance with aesthetic appeal for modern industrial applications
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Companies Section with PNG Logos -->
+    <section class="py-20 bg-white">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animated-underline">
+                    Trusted by Industry Leaders
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Our modular water storage solutions are trusted by leading companies across multiple sectors
+                </p>
+            </div>
+
+            <!-- Auto-scrolling Logos Container -->
+            <div class="relative overflow-hidden">
+                <!-- Gradient Fade Edges -->
+                <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+                <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+                
+                <!-- Scrolling Logos - First Set -->
+                <div class="flex space-x-12 animate-marquee hover:pause">
+                    {% load static %}
+                    
+                    <!-- Company 1 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/ambuja-cement-seeklogo.png' %}" 
+                                alt="Company 1" 
+                                class="max-h-full max-w-full object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+                    
+                    <!-- Company 2 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/ACC.png' %}" 
+                                alt="Company 2" 
+                                class="h-10 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=Infrastructure'">
+                        </div>
+                    </div>
+                    
+                    <!-- Company 3 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/asian paints.png' %}" 
+                                alt="Company 1" 
+                                class="max-h-full max-w-full object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+                    
+                    <!-- Company 4 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            
+                            <img src="{% static 'landing/images/companies/godrej-logo-vector.png' %}"
+                                alt="Godrej"
+                                class="max-h-full max-w-full object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">            
+                        </div>
+                    </div>
+
+                    
+                    <!-- Company 5 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/GRASIM.NS_BIG.png' %}" 
+                                alt="Company 1" 
+                                class="max-h-full max-w-full object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 6 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/JSW.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 7 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/larsen-toubro-lt-seeklogo.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 8 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/Manking.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 9 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/pidilite-logo.png' %}" 
+                                alt="Company 1" 
+                                class="h-full w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 10 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/MDLZ_BIG.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 11 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/patanjali-seeklogo.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 12 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/Sun Pharma.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 13 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/wipro.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 14 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/images/companies/apollo-hospitals.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+
+                    <!-- Company 15 - Replace with actual PNG -->
+                    <div class="flex-shrink-0 flex items-center justify-center h-24 w-48">
+                        <div class="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 w-full h-full flex items-center justify-center">
+                            <img src="{% static 'landing/static/landing/images/companies/tvs-motor-logo.png' %}" 
+                                alt="Company 1" 
+                                class="h-12 w-auto object-contain"
+                                onerror="this.onerror=null; this.src='https://via.placeholder.com/200x80/3B82F6/FFFFFF?text=EPC+Contractors'">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Duplicate Set for Seamless Scrolling -->
+                <div class="flex space-x-12 animate-marquee2 hover:pause absolute top-0">
+                    <!-- Duplicate of the same logos -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="bg-gradient-to-b from-white to-gray-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-start">
+                <div class="lg:w-2/5 animate-slide-in-left fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animated-underline">Why Industry Leaders Choose Us?</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        We don't just supply tanks; we deliver complete water storage infrastructure backed by engineering excellence and global certifications. With 25+ years of experience and 7,500+ successful projects, we are India's trusted partner for industrial water storage solutions.
+                    </p>
+                    <a class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all group" href="#">
+                        <span>Learn about our technology</span>
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <div class="lg:w-3/5 grid sm:grid-cols-2 gap-8">
+                    <div class="flex gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 card-hover animate-slide-up animation-delay-100 fade-up stagger-1 card-3d">
+                        <div class="mt-1 text-primary">
+                            <span class="material-symbols-outlined text-3xl">verified_user</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Internationally Certified</h3>
+                            <p class="text-sm text-gray-600">FM Approved, ISO 9001, and AWWA compliant designs ensuring safety and compliance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 card-hover animate-slide-up animation-delay-200 fade-up stagger-2 card-3d">
+                        <div class="mt-1 text-primary">
+                            <span class="material-symbols-outlined text-3xl">map</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Pan-India Support</h3>
+                            <p class="text-sm text-gray-600">Complete design, supply, and support network across the country for rapid execution.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 card-hover animate-slide-up animation-delay-300 fade-up stagger-3 card-3d">
+                        <div class="mt-1 text-primary">
+                            <span class="material-symbols-outlined text-3xl">extension</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Modular & Expandable</h3>
+                            <p class="text-sm text-gray-600">Future-proof your infrastructure with tanks that can be expanded or relocated easily.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 card-hover animate-slide-up animation-delay-400 fade-up stagger-4 card-3d">
+                        <div class="mt-1 text-primary">
+                            <span class="material-symbols-outlined text-3xl">shield</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-1">Proven Durability</h3>
+                            <p class="text-sm text-gray-600">Engineered for extreme weather and long service life with minimal maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Form -->
+    <section id="contact" class="bg-gradient-to-br from-gray-50 to-primary/5 py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in fade-up">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-primary to-accent px-8 py-8 text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">
+                        Get Your Custom Tank Solution
+                    </h2>
+                    <p class="text-blue-100">
+                        Share your project details and our engineering team will get back to you within 24 hours.
+                    </p>
+                </div>
+
+                <div class="p-8 md:p-10">
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <!-- ✅ THANK YOU STATE -->
+                            <div class="text-center py-12 animate-scale-in">
+                                <div class="mx-auto w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                                    <span class="material-symbols-outlined text-green-600 text-4xl">
+                                        check_circle
+                                    </span>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                                    Thank You for Contacting Us!
+                                </h3>
+
+                                <p class="text-gray-600 max-w-md mx-auto mb-8">
+                                    {{ message }}
+                                </p>
+
+                                <div class="flex justify-center gap-4">
+                                    <button
+                                        onclick="window.location.href='#products'"
+                                        class="px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition">
+                                        Explore Products
+                                    </button>
+
+                                    <button
+                                        onclick="window.location.href='#hero'"
+                                        class="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition">
+                                        Back to Home
+                                    </button>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    {% else %}
+                        <!-- ✅ UPDATED FORM WITH VALIDATION -->
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6"
+                            method="POST"
+                            action="{% url 'submit_lead' %}">
+                            {% csrf_token %}
+
+                            <div class="col-span-1 fade-up stagger-1">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Company Name *
+                                </label>
+                                <input type="text" name="company_name" required
+                                    placeholder="e.g. Acme Industries"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300
+                                            focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                            </div>
+
+                            <div class="col-span-1 fade-up stagger-2">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Contact Person *
+                                </label>
+                                <input type="text" name="contact_person" required
+                                    placeholder="Full Name"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300
+                                            focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                            </div>
+
+                            <div class="col-span-1 fade-up stagger-3">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Phone Number *
+                                </label>
+                                <input
+                                    id="phoneInput"
+                                    type="tel"
+                                    name="phone"
+                                    required
+                                    maxlength="10"
+                                    placeholder="+91 XXXXX XXXXX"
+                                    class="w-full px-4 py-3 rounded-lg border border-red-400 focus:ring-2 outline-none transition-all"
+                                />
+                                <p id="phoneError" class="text-xs text-red-500 mt-1 hidden">
+                                    Phone number must be exactly 10 digits
+                                </p>
+                            </div>
+
+                            <div class="col-span-1 fade-up stagger-4">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Email Address *
+                                </label>
+                                <input
+                                    id="emailInput"
+                                    type="email"
+                                    name="email"
+                                    required
+                                    placeholder="name@company.com"
+                                    class="w-full px-4 py-3 rounded-lg border border-red-400 focus:ring-2 outline-none transition-all"
+                                />
+                                <p id="emailError" class="text-xs text-red-500 mt-1 hidden">
+                                    Enter a valid email address
+                                </p>
+                            </div>
+
+                            <div class="col-span-1 md:col-span-2 fade-up stagger-5">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Company Location
+                                </label>
+                                <input type="text" name="location"
+                                    placeholder="City / State"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300
+                                            focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+                            </div>
+
+                            <div class="col-span-1 fade-up stagger-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Application Type
+                                </label>
+                                <select name="application_type"
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300
+                                            focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white">
+                                    <option>Select Application...</option>
+                                    <option>Fire Protection</option>
+                                    <option>Potable Water</option>
+                                    <option>Industrial Process</option>
+                                    <option>ETP / STP</option>
+                                    <option>Not Sure</option>
+                                </select>
+                            </div>
+
+                            <div class="col-span-1 fade-up stagger-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                                    Required Capacity *
+                                </label>
+                                <input
+                                    id="capacityInput"
+                                    type="text"
+                                    name="capacity"
+                                    required
+                                    placeholder="Capacity between 10 KL and 20,000 KL"
+                                    class="w-full px-4 py-3 rounded-lg border border-red-400 focus:ring-2 outline-none transition-all"
+                                />
+                                <p id="capacityError" class="text-xs text-red-500 mt-1 hidden">
+                                    Capacity is required
+                                </p>
+                            </div>
+
+                            <div class="col-span-1 md:col-span-2 pt-4 fade-up stagger-7">
+                                <button type="submit"
+                                        class="w-full py-4 bg-gradient-to-r from-primary to-accent
+                                            text-white font-bold text-lg rounded-lg hover:opacity-90
+                                            transition-all duration-300 shadow-lg transform hover:-translate-y-1
+                                            flex items-center justify-center gap-2 animate-pulse-glow">
+                                    <span>Get Expert Consultation</span>
+                                    <span class="material-symbols-outlined">send</span>
+                                </button>
+
+                                <p class="text-center text-xs text-gray-400 mt-4">
+                                    We respect your privacy. Your data is safe with us.
+                                </p>
+                            </div>
+                        </form>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-background-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <!-- Replace the icon div with an image -->
+                        <div class="flex items-center justify-center">
+                            <img src="{% static 'landing/images/White-Logo.png' %}" 
+                                alt="Shubham Tanks Logo" 
+                                class="h-12 w-auto object-contain">
+                        </div>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-6">
+                        Industrial & infrastructure water storage specialists delivering engineered reliability for decades across India.
+                    </p>
+                    <div class="flex gap-4">
+                        <!-- X (Twitter) Icon -->
+                        <a href="https://x.com/shubhamtanks" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="size-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+                            <!-- New X Logo SVG -->
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+
+                        <!-- LinkedIn Icon -->
+                        <a href="https://www.linkedin.com/company/shubhamtanks" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="size-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+
+                        <!-- Facebook Icon (NEW) -->
+                        <a href="https://www.facebook.com/ShubhamTanks/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="size-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-1">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4">Contact</h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-2">
+                            <a href="mailto:sales@shubhamtanks.com" class="flex items-center gap-2 hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                sales@shubhamtanks.com
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">call</span>
+                            +91 88799 70807
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                            127/128, Lodha Supremus – II, Road No. 22, Wagle Industrial Estate,
+                                Thane – 400 604, Maharashtra, INDIA.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-1">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4">Certifications</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <div class="bg-slate-800 px-3 py-2 rounded text-xs font-bold text-slate-300 border border-slate-700">FM Approved</div>
+                        <div class="bg-slate-800 px-3 py-2 rounded text-xs font-bold text-slate-300 border border-slate-700">ISO 9001</div>
+                        <div class="bg-slate-800 px-3 py-2 rounded text-xs font-bold text-slate-300 border border-slate-700">AWWA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-center items-center text-xs text-slate-500">
+                <p>© 2024 Shubham Tanks and Liners Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Modal -->
+    <div id="cookieModal" class="fixed inset-0 z-[9999] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+    <div class="relative max-w-lg mx-auto mt-40 bg-white rounded-2xl shadow-2xl p-6 animate-scale-in">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">
+        We Respect Your Privacy 🍪
+        </h3>
+
+        <p class="text-sm text-gray-600 mb-4">
+        We use cookies to understand how visitors interact with our website.
+        This helps us improve performance and user experience.
+        <br><br>
+        <strong>We do NOT store personal or contact information in cookies.</strong>
+        </p>
+
+        <div class="flex justify-end gap-3 mt-6">
+        <button
+            id="rejectCookies"
+            class="px-5 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
+            Reject
+        </button>
+
+        <button
+            id="acceptCookies"
+            class="px-5 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition">
+            Accept Cookies
+        </button>
+        </div>
+
+        <p class="text-xs text-gray-400 mt-4">
+        By continuing, you agree to our use of cookies for analytics purposes.
+        </p>
+    </div>
+    </div>
+
+    <script>
+        // ============================================
+        // PREMIUM SCROLL ANIMATION ENGINE
+        // ============================================
+
+        (function() {
+            'use strict';
+
+            // ===== 1. SCROLL REVEAL ANIMATIONS =====
+            function initScrollAnimations() {
+                const observerOptions = {
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -100px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            
+                            // Optional: Unobserve after animation (one-time animation)
+                            // observer.unobserve(entry.target);
+                        } else {
+                            // Remove 'visible' class when scrolling up (elements disappear)
+                            entry.target.classList.remove('visible');
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all elements with animation classes
+                const animatedElements = document.querySelectorAll(
+                    '.animate-on-scroll, .fade-up, .fade-left, .fade-right, .scale-in, .blur-in, .zoom-on-scroll, .animated-underline'
+                );
+                
+                animatedElements.forEach(el => observer.observe(el));
+            }
+
+            // ===== 2. NUMBER COUNTER ANIMATION =====
+            function animateCounter(element, target, duration = 2000) {
+                const start = 0;
+                const increment = target / (duration / 16);
+                let current = start;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target.toLocaleString() + '+';
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current).toLocaleString() + '+';
+                    }
+                }, 16);
+            }
+
+            function initCounters() {
+                const counterObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                            const target = parseInt(entry.target.dataset.count);
+                            animateCounter(entry.target, target);
+                            entry.target.classList.add('counted');
+                            counterObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+            }
+
+            // ===== 3. PARALLAX SCROLL EFFECT =====
+            function initParallax() {
+                const parallaxElements = document.querySelectorAll('.parallax');
+                
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.pageYOffset;
+                    
+                    parallaxElements.forEach(el => {
+                        const speed = el.dataset.speed || 0.5;
+                        const yPos = -(scrolled * speed);
+                        el.style.transform = `translateY(${yPos}px)`;
+                    });
+                });
+            }
+
+            // ===== 4. TEXT REVEAL ANIMATION (Word by Word) =====
+            function initTextReveal() {
+                const textElements = document.querySelectorAll('.text-reveal');
+                
+                textElements.forEach(element => {
+                    const text = element.textContent;
+                    const words = text.split(' ');
+                    
+                    element.innerHTML = words.map((word, index) => 
+                        `<span style="animation-delay: ${index * 0.1}s">${word}</span>`
+                    ).join(' ');
+                });
+            }
+
+            // ===== 5. CARD TILT EFFECT (3D Hover) =====
+            function initCardTilt() {
+                const cards = document.querySelectorAll('.card-3d');
+                
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        
+                        const rotateX = (y - centerY) / 10;
+                        const rotateY = (centerX - x) / 10;
+                        
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px) scale(1.02)`;
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+                    });
+                });
+            }
+
+            // ===== 6. INITIALIZE ALL ANIMATIONS =====
+            function initAnimations() {
+                initScrollAnimations();
+                initCounters();
+                initParallax();
+                initTextReveal();
+                initCardTilt();
+                
+                console.log('✨ Premium animations initialized');
+            }
+
+            // Start the animation engine
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initAnimations);
+            } else {
+                initAnimations();
+            }
+        })();
+
+        // ============================================
+        // EXISTING FUNCTIONALITY (KEPT AS IS)
+        // ============================================
+
+        // Premium smooth scroll with easing
+        function smoothScrollTo(target, duration = 900) {
+            const element = document.querySelector(target);
+            if (!element) return;
+
+            const startY = window.pageYOffset;
+            const targetY = element.getBoundingClientRect().top + startY - 80;
+            const distance = targetY - startY;
+            let startTime = null;
+
+            function easeInOutCubic(t) {
+                return t < 0.5
+                    ? 4 * t * t * t
+                    : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+
+            function animation(currentTime) {
+                if (!startTime) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+
+                window.scrollTo(0, startY + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // Navigation JavaScript
+        (function() {
+            const nav = document.getElementById('mainNav');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            const allNavLinks = [...navLinks, ...mobileNavLinks];
+
+            let isMobileMenuOpen = false;
+
+            // Scroll detection for navbar background
+            function handleScroll() {
+                const logoLight = document.getElementById('logoLight');
+                const logoDark = document.getElementById('logoDark');
+                
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                    
+                    // Switch to dark logo
+                    if (logoLight && logoDark) {
+                        logoLight.style.opacity = '0';      // Hide light logo
+                        logoDark.style.opacity = '1';       // Show dark logo
+                    }
+                } else {
+                    nav.classList.remove('scrolled');
+                    
+                    // Switch to light logo
+                    if (logoLight && logoDark) {
+                        logoLight.style.opacity = '1';      // Show light logo
+                        logoDark.style.opacity = '0';       // Hide dark logo
+                    }
+                }
+
+                // Active section detection
+                const sections = ['hero', 'products', 'applications', 'why-us', 'contact'];
+                let currentSection = 'hero';
+
+                for (const section of sections.reverse()) {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top <= 150) {
+                            currentSection = section;
+                            break;
+                        }
+                    }
+                }
+
+                // Update active states
+                allNavLinks.forEach(link => {
+                    if (link.dataset.section === currentSection) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Mobile menu toggle
+            function toggleMobileMenu() {
+                isMobileMenuOpen = !isMobileMenuOpen;
+                
+                if (isMobileMenuOpen) {
+                    mobileMenu.classList.add('open');
+                    mobileMenuOverlay.classList.add('show');
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.remove('open');
+                    mobileMenuOverlay.classList.remove('show');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            }
+
+            // Event Listeners
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+
+            // Handle navigation clicks
+            allNavLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const target = link.getAttribute('href');
+                    smoothScrollTo(target);
+                    
+                    // Close mobile menu if open
+                    if (isMobileMenuOpen) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+            // Quote button handlers
+            const quoteButtons = document.querySelectorAll('#quoteButton, #mobileQuoteButton, #heroQuoteButton');
+            quoteButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    smoothScrollTo('#contact');
+                    if (isMobileMenuOpen) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
+
+            // Close mobile menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && isMobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1024 && isMobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+            });
+        })();
+
+        // Simple throttle
+        function throttle(fn, wait = 20) {
+          let last = 0;
+          return function(...args) {
+            const now = Date.now();
+            if (now - last >= wait) {
+              last = now;
+              fn.apply(this, args);
+            }
+          };
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const container = document.querySelector('.scroll-story-container');
+          if (!container) return;
+          const steps = [...document.querySelectorAll('.story-step')];
+          const images = [...document.querySelectorAll('.story-image')];
+          const dots = [...document.querySelectorAll('.progress-dot')];
+
+          function setActive(index) {
+            steps.forEach((s, i) => {
+              s.classList.toggle('opacity-100', i === index);
+              s.classList.toggle('opacity-0', i !== index);
+              s.classList.toggle('translate-y-0', i === index);
+              s.classList.toggle('translate-y-6', i !== index);
+            });
+            images.forEach((img, i) => {
+              img.classList.toggle('opacity-100', i === index);
+              img.classList.toggle('opacity-0', i !== index);
+              img.classList.toggle('scale-100', i === index);
+              img.classList.toggle('scale-105', i !== index);
+            });
+            dots.forEach((d, i) => {
+              d.classList.toggle('bg-white', i === index);
+              d.classList.toggle('bg-white/50', i !== index);
+              d.classList.toggle('scale-125', i === index);
+            });
+          }
+
+          function onScroll() {
+            const rect = container.getBoundingClientRect();
+            const total = rect.height - window.innerHeight;
+            const scrolled = Math.min(Math.max(-rect.top, 0), total);
+            const ratio = total <= 0 ? 0 : scrolled / total;
+            const index = Math.min(steps.length - 1, Math.floor(ratio * steps.length + 0.001));
+            setActive(index);
+          }
+
+          onScroll(); // initial
+          window.addEventListener('scroll', throttle(onScroll, 16));
+          window.addEventListener('resize', throttle(onScroll, 50));
+
+          // Mobile fade-up observer for ".fade-up" cards
+          const fadeElements = document.querySelectorAll('.fade-up');
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-6');
+              } else {
+                entry.target.classList.remove('opacity-100');
+                entry.target.classList.add('opacity-0', 'translate-y-6');
+              }
+            });
+          }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+
+          fadeElements.forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-6');
+            observer.observe(el);
+          });
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* ================= PHONE VALIDATION ================= */
+            const phoneInput = document.getElementById("phoneInput");
+            const phoneError = document.getElementById("phoneError");
+
+            phoneInput.addEventListener("input", () => {
+                // allow digits only
+                phoneInput.value = phoneInput.value.replace(/\D/g, "");
+
+                if (phoneInput.value.length < 10) {
+                    phoneInput.classList.remove("border-green-500");
+                    phoneInput.classList.add("border-red-400");
+                    phoneError.classList.remove("hidden");
+                } 
+                else {
+                    phoneInput.value = phoneInput.value.slice(0, 10); // stop at 10
+                    phoneInput.classList.remove("border-red-400");
+                    phoneInput.classList.add("border-green-500");
+                    phoneError.classList.add("hidden");
+                }
+            });
+
+            /* ================= EMAIL VALIDATION ================= */
+            const emailInput = document.getElementById("emailInput");
+            const emailError = document.getElementById("emailError");
+
+            emailInput.addEventListener("input", () => {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailRegex.test(emailInput.value)) {
+                    emailInput.classList.remove("border-green-500");
+                    emailInput.classList.add("border-red-400");
+                    emailError.classList.remove("hidden");
+                } else {
+                    emailInput.classList.remove("border-red-400");
+                    emailInput.classList.add("border-green-500");
+                    emailError.classList.add("hidden");
+                }
+            });
+
+            /* ================= CAPACITY VALIDATION ================= */
+            const capacityInput = document.getElementById("capacityInput");
+            const capacityError = document.getElementById("capacityError");
+
+            capacityInput.addEventListener("input", () => {
+                if (capacityInput.value.trim() === "") {
+                    capacityInput.classList.remove("border-green-500");
+                    capacityInput.classList.add("border-red-400");
+                    capacityError.classList.remove("hidden");
+                } else {
+                    capacityInput.classList.remove("border-red-400");
+                    capacityInput.classList.add("border-green-500");
+                    capacityError.classList.add("hidden");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
